@@ -1129,20 +1129,18 @@
     pretty-ms "^5.1.0"
     yaml "^1.9.2"
 
-"@boost/common@^2.5.1", "@boost/common@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@boost/common/-/common-2.7.1.tgz#ef121eef2bfcd7a41235c1c5404cb1169e4a37e5"
-  integrity sha512-GE5rH3RlpB4sqRvmR1qPIpVpVv0VUSZYjU+beLSe1jZgSVQgHwx2+1w6nfiS5tqdDx+ZJGIC5u9QinkGkMq0Hw==
+"@boost/common@^2.5.1", "@boost/common@^2.7.1", "@boost/common@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@boost/common/-/common-2.7.2.tgz#cc38f1dc0fd6d49738f3468b961d08e789f672fa"
+  integrity sha512-HlWs91P/8n9ShNkLocpIhvOzFELkWArc+/jgdDlpIGlwy2ZUMDIxUuzMJDltzJXN5SR+w7MD9y9G/TaecGpFvg==
   dependencies:
-    "@boost/decorators" "^2.1.1"
-    "@boost/internal" "^2.2.1"
+    "@boost/decorators" "^2.1.2"
+    "@boost/internal" "^2.2.2"
     fast-glob "^3.2.4"
     json5 "^2.2.0"
     optimal "^4.3.0"
     pretty-ms "^7.0.1"
-    yaml "^1.10.0"
-  optionalDependencies:
-    typescript "^4.0.0"
+    yaml "^1.10.2"
 
 "@boost/core@^1.18.6":
   version "1.18.6"
@@ -1184,22 +1182,22 @@
     execa "^3.4.0"
     fast-glob "^3.2.2"
 
-"@boost/debug@^2.2.4":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@boost/debug/-/debug-2.2.4.tgz#e9219ff1177bb76f5472f4ac61296d8ce5107b62"
-  integrity sha512-yHa3bCx5D9/q1gcdH1zdU+5EiQR9+mdufOAjwWzsyawLlZC268TolAIuEbnqXBskcibicGWsUYKKTS8i2227xA==
+"@boost/debug@^2.2.4", "@boost/debug@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@boost/debug/-/debug-2.2.5.tgz#9b036236d966c5e97375f3e5356991fa5a351959"
+  integrity sha512-WSxgWWu+eFfSKrTfgSVC+/XuY/HP39Yh5yrgbsKlikQwFKXy6wdFcPCgjX/An8TEvcViy6Zc6fI9MFMCgIaHPg==
   dependencies:
-    "@boost/common" "^2.7.1"
-    "@boost/internal" "^2.2.1"
+    "@boost/common" "^2.7.2"
+    "@boost/internal" "^2.2.2"
     "@types/debug" "^4.1.5"
     debug "^4.3.1"
     execa "^5.0.0"
     fast-glob "^3.2.4"
 
-"@boost/decorators@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@boost/decorators/-/decorators-2.1.1.tgz#2a6f2fb74bf4db7bb64fc00f0eb05ef02e947eb3"
-  integrity sha512-RacAODPQoyRkkvlhWmGteO6UzDYI9mFEst44EB+Nae3DiW+3gPmv5Pq6LfsReyT0X+j+Xqa/De6oQbblman+Sw==
+"@boost/decorators@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@boost/decorators/-/decorators-2.1.2.tgz#060813e1e8c1a4a5bba622e5f9e33fe067193e8c"
+  integrity sha512-XHUYInAFHeHZg9576vprRp8zYp58hPCFUEqh+WiWfyXi7UB3EFEzz6Cr0geB/c4FJzic3gvU8pqBx0VrULY3VA==
 
 "@boost/event@^1.3.1":
   version "1.3.1"
@@ -1223,10 +1221,10 @@
     chalk "^3.0.0"
     debug "^4.1.1"
 
-"@boost/internal@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@boost/internal/-/internal-2.2.1.tgz#73f83edf06c57790cfa2df9a0da176220ed6e447"
-  integrity sha512-5EdmMMRoZAA7cDXMHQ8S0w1sU7+0HdUemnRhFy+jJbJOtwKlU2HXdLFQKphNX3f/NFKHt14Xtt4oIDRBTMXT0g==
+"@boost/internal@^2.2.1", "@boost/internal@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@boost/internal/-/internal-2.2.2.tgz#e1b02f45da6bbae9781c9ab9e95fece88f679b4a"
+  integrity sha512-9Uw1L/tuVtNvqQUboqAhhAHxeFU5XEIQMa5CvrV6q6irePFhsreyreldV0lFiOLpJcPnh7woynKkrgpJxt4O8w==
   dependencies:
     debug "^4.3.1"
 
@@ -9940,7 +9938,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.0.0, typescript@^4.1.3, typescript@^4.2.3:
+typescript@^4.1.3, typescript@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.3.tgz#39062d8019912d43726298f09493d598048c1ce3"
   integrity sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
@@ -10382,10 +10380,10 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^1.10.0, yaml@^1.9.2:
-  version "1.10.0"
-  resolved "https://registry.npmjs.org/yaml/-/yaml-1.10.0.tgz#3b593add944876077d4d683fee01081bd9fff31e"
-  integrity sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==
+yaml@^1.10.0, yaml@^1.10.2, yaml@^1.9.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
+  integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
 yargs-parser@10.x:
   version "10.1.0"

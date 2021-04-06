@@ -9,6 +9,7 @@ import {
 } from '@aesthetic/sss';
 import { Utilities } from '@aesthetic/system';
 import {
+  ClassName,
   ColorScheme,
   ContrastLevel,
   Direction,
@@ -28,6 +29,19 @@ export type ElementStyles = LocalBlock;
 export type ComponentStyles = LocalStyleSheet<ElementStyles>;
 export type ThemeStyles = GlobalStyleSheet<ElementStyles>;
 
+export type CompiledClassMap = Record<string, ClassName | ClassName[]>;
+
+export interface CompiledRenderResult {
+  result?: ClassName | CompiledClassMap;
+  variants?: Record<string, ClassName | CompiledClassMap>;
+  variantTypes?: string[];
+}
+
+export type CompiledRenderResultSheet = Record<
+  string,
+  ClassName | ClassName[] | CompiledRenderResult
+>;
+
 export interface RenderResult<T> {
   result?: T;
   variants?: Record<string, T>;
@@ -40,6 +54,7 @@ export type RenderResultSheet<Result, Keys extends string = string> = {
 
 export interface SheetParams {
   contrast?: ContrastLevel;
+  deterministic?: boolean;
   direction?: Direction;
   scheme?: ColorScheme;
   theme?: ThemeName;

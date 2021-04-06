@@ -181,7 +181,11 @@ describe('LocalSheet', () => {
           "url('fonts/Roboto.woff2') format('woff2'), url('fonts/Roboto.ttf') format('truetype')",
       },
       {
+        contrast: 'normal',
+        deterministic: false,
         direction: 'ltr',
+        scheme: 'light',
+        theme: 'day',
         unit: 'px',
         vendor: false,
       },
@@ -201,7 +205,11 @@ describe('LocalSheet', () => {
       },
       '',
       {
+        contrast: 'normal',
+        deterministic: false,
         direction: 'ltr',
+        scheme: 'light',
+        theme: 'day',
         unit: 'px',
         vendor: false,
       },

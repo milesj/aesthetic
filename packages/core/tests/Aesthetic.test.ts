@@ -241,21 +241,6 @@ describe('Aesthetic', () => {
     it('returns a `LocalSheet` instance', () => {
       expect(aesthetic.createComponentStyles(() => ({}))).toBeInstanceOf(StyleSheet);
     });
-
-    it('renders styles immediately upon creation', () => {
-      const spy = jest.spyOn(aesthetic.getEngine(), 'renderDeclaration');
-
-      aesthetic.createComponentStyles(() => ({
-        element: {
-          display: 'block',
-          width: '100%',
-        },
-      }));
-
-      expect(spy).toHaveBeenCalledTimes(2);
-
-      spy.mockRestore();
-    });
   });
 
   describe('createThemeStyles()', () => {
@@ -508,36 +493,6 @@ describe('Aesthetic', () => {
       });
       expect(spy).toHaveBeenCalledWith(aesthetic.getEngine(), lightTheme, {
         direction: expect.any(String),
-        vendor: false,
-      });
-    });
-
-    it('can customize params with options', () => {
-      const sheet = createTempSheet();
-      const spy = jest.spyOn(sheet, 'render');
-
-      aesthetic.configure({
-        defaultUnit: 'em',
-        vendorPrefixer,
-      });
-
-      aesthetic.renderComponentStyles(sheet, { direction: 'rtl' });
-
-      expect(spy).toHaveBeenCalledWith(aesthetic.getEngine(), lightTheme, {
-        direction: 'rtl',
-        vendor: true,
-      });
-    });
-
-    it('can customize theme with options', () => {
-      const sheet = createTempSheet();
-      const spy = jest.spyOn(sheet, 'render');
-
-      aesthetic.renderComponentStyles(sheet, { theme: 'night' });
-
-      expect(spy).toHaveBeenCalledWith(aesthetic.getEngine(), darkTheme, {
-        direction: expect.any(String),
-        theme: 'night',
         vendor: false,
       });
     });

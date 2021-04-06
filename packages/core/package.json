@@ -23,6 +23,8 @@
     "dts/**/*.d.ts",
     "esm/**/*.{js,map}",
     "lib/**/*.{js,map}",
+    "runtime.d.ts",
+    "runtime.js",
     "src/**/*.{ts,tsx,json}",
     "test.d.ts",
     "test.js"
@@ -49,6 +51,7 @@
   "packemon": {
     "inputs": {
       "index": "src/index.ts",
+      "runtime": "src/runtime.ts",
       "test": "src/test.ts"
     },
     "platform": "browser"

@@ -123,7 +123,8 @@ export default class ThemeRegistry<T extends object> {
   // eslint-disable-next-line complexity
   register(name: string, theme: Theme<T>, isDefault: boolean = false): this {
     if (__DEV__) {
-      if (!(theme instanceof Theme)) {
+      // @ts-expect-error
+      if (typeof theme.design === 'undefined') {
         throw new TypeError('Only a `Theme` object can be registered.');
       }
 

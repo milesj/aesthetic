@@ -23,27 +23,31 @@ export * from './types';
 
 export { createStyleElements, getStyleElement };
 
-const { body, documentElement: root } = document;
-
 // Set active direction on the document `dir` attribute
 function setDirection(direction: Direction) {
-  root.setAttribute('dir', direction);
+  document.documentElement.setAttribute('dir', direction);
 }
 
 // Set CSS variables to :root
 function setRootVariables(vars: VariablesMap) {
   objectLoop(vars, (value, key) => {
-    root.style.setProperty(formatVariable(key), String(value));
+    document.documentElement.style.setProperty(formatVariable(key), String(value));
   });
 }
 
 // Set active theme class names on the `body`
 function setTheme(classNames: string[]) {
-  body.className = classNames.join(' ');
+  document.body.className = classNames.join(' ');
 }
 
 export function createClientEngine(options: Partial<EngineOptions> = {}): StyleEngine {
-  const direction = (root.getAttribute('dir') || body.getAttribute('dir') || 'ltr') as Direction;
+  if (global.AESTHETIC_CUSTOM_ENGINE) {
+    return global.AESTHETIC_CUSTOM_ENGINE as StyleEngine;
+  }
+
+  const direction = (document.documentElement.getAttribute('dir') ||
+    document.body.getAttribute('dir') ||
+    'ltr') as Direction;
 
   const engine: StyleEngine = createStyleEngine({
     cacheManager: createCacheManager(),
